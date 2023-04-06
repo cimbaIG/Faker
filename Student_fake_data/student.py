@@ -57,5 +57,5 @@ class Student:
         return string
     
     def generate_email(self):
-        return self.name[0].lower() \
+        return self.remove_croatian_letters(self.name) + "." \
             + self.remove_croatian_letters(self.surname) + "@fsb.hr"
