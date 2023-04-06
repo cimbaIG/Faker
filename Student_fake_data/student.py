@@ -51,7 +51,7 @@ class Student:
             + f"Course_ID: {self.course_id}"
             
     def generate_jmbag(self, num_of_digits: int):
-        lower = 10**(num_of_digits-1)
+        lower = 10**(num_of_digits - 1)
         upper = 10**num_of_digits - 1
         return random.randint(lower, upper)
     

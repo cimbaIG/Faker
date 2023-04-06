@@ -3,7 +3,7 @@ import json
 
 
 students = []
-for _ in range(300):
+for _ in range(482):
     student = Student()
     students.append(        
         {
