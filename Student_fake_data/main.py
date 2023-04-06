@@ -1,5 +1,5 @@
 from student import Student
-import random
+import json
 
 
 students = []
@@ -14,5 +14,5 @@ for _ in range(300):
         }
     )
 
-for student in students:
-    print(student)
+with open("./students.json", "w") as file:
+    json.dump(students, file)
