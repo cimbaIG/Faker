@@ -1,3 +1,4 @@
+from course import Course
 from faker import Faker
 import random
 
@@ -16,11 +17,13 @@ class Student:
     def __init__(self):
         
         fake_data = Faker('hr_HR')
+        course = Course()
         
         self._name = fake_data.unique.name().split(' ')[0]
         self._surname = fake_data.unique.name().split(' ')[1]
         self._email = self.generate_email()
         self._jmbag = self.generate_jmbag(10)
+        self._course_id = course.course_id
         
     @property
     def name(self):
@@ -38,9 +41,14 @@ class Student:
     def jmbag(self):
         return self._jmbag
     
+    @property
+    def courseID(self):
+        return self._course_id
+    
     def __str__(self):
         return f"Student {self._jmbag}, "+ f"{self._name}" + " " \
-            + f"{self._surname}," + f" {self._email}"
+            + f"{self._surname}," + f" {self._email}, " \
+            + f"Course_ID: {self.course_id}"
             
     def generate_jmbag(self, num_of_digits: int):
         lower = 10**(num_of_digits-1)

@@ -10,7 +10,8 @@ for _ in range(300):
             "name": student.name,
             "surname": student.surname,
             "email": student.email,
-            "JMBAG": student.jmbag
+            "JMBAG": student.jmbag,
+            "course_id": student.courseID
         }
     )
 
