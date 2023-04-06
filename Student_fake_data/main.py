@@ -14,5 +14,5 @@ for _ in range(300):
         }
     )
 
-with open("./students.json", "w") as file:
+with open("./Student_fake_data/students.json", "w") as file:
     json.dump(students, file)
